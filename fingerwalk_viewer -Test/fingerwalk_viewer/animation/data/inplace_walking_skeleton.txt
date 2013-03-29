@@ -1,0 +1,149 @@
+Hip
+0
+0.0 0.0 0.0
+0.0 0.0 0.0 1.0
+
+LeftUpLeg
+Hip
+0.1855 0.0 0.0
+0.0 0.0 0.0 1.0
+
+LeftLeg
+LeftUpLeg
+0.0 -0.79782 0.0
+0.0 0.0 0.0 1.0
+
+LeftFoot
+LeftLeg
+0.0 -0.78308 0.0
+0.130526 0.0 0.0 0.991445
+
+LeftToeBase
+LeftFoot
+0.0 0.0 0.3
+-0.130526 0.0 0.0 0.991445
+
+LeftToeEnd
+LeftToeBase
+0.0 0.0 0.15
+0.0 0.0 0.0 1.0
+
+RightUpLeg
+Hip
+-0.1855 0.0 0.0
+0.0 0.0 0.0 1.0
+
+RightLeg
+RightUpLeg
+0.0 -0.79782 0.0
+0.0 0.0 0.0 1.0
+
+RightFoot
+RightLeg
+0.0 -0.78308 0.0
+0.130526 0.0 0.0 0.991445
+
+RightToeBase
+RightFoot
+0.0 0.0 0.3007
+-0.130526 0.0 0.0 0.991445
+
+RightToeEnd
+RightToeBase
+0.0 0.0 0.15
+0.0 0.0 0.0 1.0
+
+Spine
+Hip
+0.0 0.002 0.0
+0.0 0.0 0.0 1.0
+
+Spine1
+Spine
+0.0 0.51822 0.0
+0.0 0.0 0.0 1.0
+
+Neck
+Spine1
+0.0 0.39912 0.0
+0.0 0.0 0.0 1.0
+
+Head
+Neck
+0.0 0.34948 0.0
+0.0 0.0 0.0 1.0
+
+HeadEnd
+Head
+0.0 0.23 0.0
+0.0 0.0 0.0 1.0
+
+LeftShoulder
+Spine1
+0.0 0.39912 0.0
+0.0 0.0 -0.707107 0.707107
+
+LeftArm
+LeftShoulder
+0.0 0.34074 0.0
+0.0 0.0 0.0 1.0
+
+LeftForeArm
+LeftArm
+0.0 0.5558 0.0
+0.0 0.0 0.0 1.0
+
+LeftHand
+LeftForeArm
+0.0 0.4332 0.0
+0.0 0.0 0.0 1.0
+
+LeftHandThumb
+LeftHand
+0.0 0.0 0.0
+0.0 0.0 0.0 1.0
+
+LeftThumbEnd
+LeftHandThumb
+0.0 0.0 0.2
+0.0 0.0 0.0 1.0
+
+LeftWristEnd
+LeftHand
+0.0 0.2 0.0
+0.0 0.0 0.0 1.0
+
+RightShoulder
+Spine1
+0.0 0.39912 0.0
+0.0 0.0 0.707107 0.707107
+
+RightArm
+RightShoulder
+0.0 0.34074 0.0
+0.0 0.0 0.0 1.0
+
+RightForeArm
+RightArm
+0.0 0.5558 0.0
+0.0 0.0 0.0 1.0
+
+RightHand
+RightForeArm
+0.0 0.4332 0.0
+0.0 0.0 0.0 1.0
+
+RightHandThumb
+RightHand
+0.0 0.0 0.0
+0.0 0.0 0.0 1.0
+
+RightThumbEnd
+RightHandThumb
+0.0 0.0 0.2
+0.0 0.0 0.0 1.0
+
+RightWristEnd
+RightHand
+0.0 0.274 0.0
+0.0 0.0 0.0 1.0

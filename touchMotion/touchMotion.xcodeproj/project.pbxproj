@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F61C53A017057EE000135BD0 /* VVBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61C539F17057EE000135BD0 /* VVBasics.framework */; };
+		F61C53A217057EF100135BD0 /* VVOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61C53A117057EF100135BD0 /* VVOSC.framework */; };
+		F61C53A717057F2300135BD0 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F61C53A417057F2300135BD0 /* MJPopupBackgroundView.m */; };
+		F61C53A817057F2300135BD0 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F61C53A617057F2300135BD0 /* UIViewController+MJPopupViewController.m */; };
+		F61C53AB17057F4600135BD0 /* blue_arrow_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C53A917057F4600135BD0 /* blue_arrow_3.png */; };
+		F61C53AC17057F4600135BD0 /* blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C53AA17057F4600135BD0 /* blue_arrow.png */; };
+		F61C53AF17057F5D00135BD0 /* maze10_old.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F61C53AD17057F5D00135BD0 /* maze10_old.jpg */; };
+		F61C53B017057F5D00135BD0 /* maze10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F61C53AE17057F5D00135BD0 /* maze10.jpg */; };
+		F61C53B217057F6A00135BD0 /* blue_grid_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C53B117057F6A00135BD0 /* blue_grid_2.png */; };
+		F61C53B417057F9400135BD0 /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61C53B317057F9400135BD0 /* libVVOSC.a */; };
+		F61C53B617057FAE00135BD0 /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61C53B517057FAE00135BD0 /* libVVBasics.a */; };
+		F64D534616F734E7002227C0 /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64D534416F734E7002227C0 /* PopupViewController.m */; };
+		F64D534716F734E7002227C0 /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F64D534516F734E7002227C0 /* PopupViewController.xib */; };
+		F680B72E16B9093600B57880 /* OneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F680B72D16B9093600B57880 /* OneFingerRotationGestureRecognizer.m */; };
+		F680B75216B90AAF00B57880 /* UDPEcho.m in Sources */ = {isa = PBXBuildFile; fileRef = F680B75116B90AAF00B57880 /* UDPEcho.m */; };
+		F680B75516B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F680B75416B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.m */; };
+		F683E68815DC29810003078F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F683E68715DC29810003078F /* MessageUI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		F683E68A15DC2F610003078F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F683E68915DC2F610003078F /* MobileCoreServices.framework */; };
+		F683E68B15DC2F680003078F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69918B3158492B200D3CC89 /* CoreGraphics.framework */; };
+		F69918B0158492B200D3CC89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69918AF158492B200D3CC89 /* UIKit.framework */; };
+		F69918B2158492B200D3CC89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69918B1158492B200D3CC89 /* Foundation.framework */; };
+		F69918BA158492B200D3CC89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F69918B8158492B200D3CC89 /* InfoPlist.strings */; };
+		F69918BC158492B200D3CC89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F69918BB158492B200D3CC89 /* main.m */; };
+		F69918C9158492D900D3CC89 /* MotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69918C7158492D900D3CC89 /* MotionView.m */; };
+		F69918CA158492D900D3CC89 /* MotionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69918C8158492D900D3CC89 /* MotionView.xib */; };
+		F6A4B89B16200BA00087CEE9 /* CPBAcceleromterDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4B89A16200BA00087CEE9 /* CPBAcceleromterDelegate.m */; };
+		F6CA95F5161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CA95F4161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.m */; };
+		F6D4111215FBE1EB0001A6BD /* TouchMotionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F69918BF158492B200D3CC89 /* TouchMotionAppDelegate.m */; };
+		F6D4111615FBE74A0001A6BD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F683E68C15DC2FCF0003078F /* CFNetwork.framework */; };
+		F6D4118215FBEB9D0001A6BD /* Connect.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D4111415FBE4950001A6BD /* Connect.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F636FD1F16FF9D05006AA403 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F61C539F17057EE000135BD0 /* VVBasics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVBasics.framework; path = "../../../vvopensource-read-only/build@rpath/VVBasics.framework"; sourceTree = "<group>"; };
+		F61C53A117057EF100135BD0 /* VVOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVOSC.framework; path = "../../../vvopensource-read-only/build@rpath/VVOSC.framework"; sourceTree = "<group>"; };
+		F61C53A317057F2300135BD0 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJPopupBackgroundView.h; path = "../../../../Downloads/MJPopupViewController-master/Source/MJPopupBackgroundView.h"; sourceTree = "<group>"; };
+		F61C53A417057F2300135BD0 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJPopupBackgroundView.m; path = "../../../../Downloads/MJPopupViewController-master/Source/MJPopupBackgroundView.m"; sourceTree = "<group>"; };
+		F61C53A517057F2300135BD0 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "../../../../Downloads/MJPopupViewController-master/Source/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		F61C53A617057F2300135BD0 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MJPopupViewController.m"; path = "../../../../Downloads/MJPopupViewController-master/Source/UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		F61C53A917057F4600135BD0 /* blue_arrow_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_arrow_3.png; path = ../../../blue_arrow_3.png; sourceTree = "<group>"; };
+		F61C53AA17057F4600135BD0 /* blue_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_arrow.png; path = ../../../blue_arrow.png; sourceTree = "<group>"; };
+		F61C53AD17057F5D00135BD0 /* maze10_old.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = maze10_old.jpg; path = ../../../maze10_old.jpg; sourceTree = "<group>"; };
+		F61C53AE17057F5D00135BD0 /* maze10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = maze10.jpg; path = ../../../maze10.jpg; sourceTree = "<group>"; };
+		F61C53B117057F6A00135BD0 /* blue_grid_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_grid_2.png; path = ../../../blue_grid_2.png; sourceTree = "<group>"; };
+		F61C53B317057F9400135BD0 /* libVVOSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVVOSC.a; path = ../../../../Library/SDKs/VVOSC/iphoneos.sdk/usr/local/lib/libVVOSC.a; sourceTree = "<group>"; };
+		F61C53B517057FAE00135BD0 /* libVVBasics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVVBasics.a; path = ../../../../Library/SDKs/VVBasics/iphoneos.sdk/usr/local/lib/libVVBasics.a; sourceTree = "<group>"; };
+		F64D534316F734E7002227C0 /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupViewController.h; sourceTree = "<group>"; };
+		F64D534416F734E7002227C0 /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupViewController.m; sourceTree = "<group>"; };
+		F64D534516F734E7002227C0 /* PopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
+		F680B72C16B9093600B57880 /* OneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneFingerRotationGestureRecognizer.h; path = "OneFingerRotationGestureDemo-master 2/OneFingerRotationGestureDemo/OneFingerRotationGestureRecognizer.h"; sourceTree = SOURCE_ROOT; };
+		F680B72D16B9093600B57880 /* OneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneFingerRotationGestureRecognizer.m; path = "OneFingerRotationGestureDemo-master 2/OneFingerRotationGestureDemo/OneFingerRotationGestureRecognizer.m"; sourceTree = SOURCE_ROOT; };
+		F680B75016B90AAF00B57880 /* UDPEcho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDPEcho.h; path = UDPEcho/UDPEcho.h; sourceTree = SOURCE_ROOT; };
+		F680B75116B90AAF00B57880 /* UDPEcho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDPEcho.m; path = UDPEcho/UDPEcho.m; sourceTree = SOURCE_ROOT; };
+		F680B75316B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTOneFingerRotationGestureRecognizer.h; path = "KTOneFingerRotationGestureRecognizer-master/KTOneFingerRotationGestureRecognizer.h"; sourceTree = SOURCE_ROOT; };
+		F680B75416B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTOneFingerRotationGestureRecognizer.m; path = "KTOneFingerRotationGestureRecognizer-master/KTOneFingerRotationGestureRecognizer.m"; sourceTree = SOURCE_ROOT; };
+		F683E68715DC29810003078F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F683E68915DC2F610003078F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F683E68C15DC2FCF0003078F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F69918AB158492B200D3CC89 /* touchMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69918AF158492B200D3CC89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F69918B1158492B200D3CC89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F69918B3158492B200D3CC89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F69918B7158492B200D3CC89 /* touchMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "touchMotion-Info.plist"; sourceTree = "<group>"; };
+		F69918B9158492B200D3CC89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F69918BB158492B200D3CC89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F69918BD158492B200D3CC89 /* touchMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "touchMotion-Prefix.pch"; sourceTree = "<group>"; };
+		F69918BE158492B200D3CC89 /* TouchMotionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchMotionAppDelegate.h; sourceTree = "<group>"; };
+		F69918BF158492B200D3CC89 /* TouchMotionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchMotionAppDelegate.m; sourceTree = "<group>"; };
+		F69918C6158492D900D3CC89 /* MotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionView.h; sourceTree = "<group>"; };
+		F69918C7158492D900D3CC89 /* MotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionView.m; sourceTree = "<group>"; };
+		F69918C8158492D900D3CC89 /* MotionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotionView.xib; sourceTree = "<group>"; };
+		F6A4B89916200BA00087CEE9 /* CPBAcceleromterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBAcceleromterDelegate.h; sourceTree = "<group>"; };
+		F6A4B89A16200BA00087CEE9 /* CPBAcceleromterDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBAcceleromterDelegate.m; sourceTree = "<group>"; };
+		F6A4B89D16200C190087CEE9 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		F6CA95F3161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBPressureTouchGestureRecognizer.h; sourceTree = "<group>"; };
+		F6CA95F4161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBPressureTouchGestureRecognizer.m; sourceTree = "<group>"; };
+		F6D4111315FBE4950001A6BD /* Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connect.h; sourceTree = "<group>"; };
+		F6D4111415FBE4950001A6BD /* Connect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connect.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F69918A8158492B200D3CC89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D4111615FBE74A0001A6BD /* CFNetwork.framework in Frameworks */,
+				F69918B2158492B200D3CC89 /* Foundation.framework in Frameworks */,
+				F683E68B15DC2F680003078F /* CoreGraphics.framework in Frameworks */,
+				F683E68A15DC2F610003078F /* MobileCoreServices.framework in Frameworks */,
+				F683E68815DC29810003078F /* MessageUI.framework in Frameworks */,
+				F69918B0158492B200D3CC89 /* UIKit.framework in Frameworks */,
+				F61C53A017057EE000135BD0 /* VVBasics.framework in Frameworks */,
+				F61C53A217057EF100135BD0 /* VVOSC.framework in Frameworks */,
+				F61C53B417057F9400135BD0 /* libVVOSC.a in Frameworks */,
+				F61C53B617057FAE00135BD0 /* libVVBasics.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F69918A0158492B200D3CC89 = {
+			isa = PBXGroup;
+			children = (
+				F683E68C15DC2FCF0003078F /* CFNetwork.framework */,
+				F683E68915DC2F610003078F /* MobileCoreServices.framework */,
+				F683E68715DC29810003078F /* MessageUI.framework */,
+				F69918B5158492B200D3CC89 /* touchMotion */,
+				F69918AE158492B200D3CC89 /* Frameworks */,
+				F69918AC158492B200D3CC89 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		F69918AC158492B200D3CC89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69918AB158492B200D3CC89 /* touchMotion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69918AE158492B200D3CC89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61C53A117057EF100135BD0 /* VVOSC.framework */,
+				F61C539F17057EE000135BD0 /* VVBasics.framework */,
+				F69918AF158492B200D3CC89 /* UIKit.framework */,
+				F69918B1158492B200D3CC89 /* Foundation.framework */,
+				F69918B3158492B200D3CC89 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F69918B5158492B200D3CC89 /* touchMotion */ = {
+			isa = PBXGroup;
+			children = (
+				F61C53B117057F6A00135BD0 /* blue_grid_2.png */,
+				F61C53AD17057F5D00135BD0 /* maze10_old.jpg */,
+				F61C53AE17057F5D00135BD0 /* maze10.jpg */,
+				F61C53A917057F4600135BD0 /* blue_arrow_3.png */,
+				F61C53AA17057F4600135BD0 /* blue_arrow.png */,
+				F61C53B517057FAE00135BD0 /* libVVBasics.a */,
+				F61C53B317057F9400135BD0 /* libVVOSC.a */,
+				F64D534316F734E7002227C0 /* PopupViewController.h */,
+				F64D534416F734E7002227C0 /* PopupViewController.m */,
+				F64D534516F734E7002227C0 /* PopupViewController.xib */,
+				F61C53A317057F2300135BD0 /* MJPopupBackgroundView.h */,
+				F61C53A417057F2300135BD0 /* MJPopupBackgroundView.m */,
+				F61C53A517057F2300135BD0 /* UIViewController+MJPopupViewController.h */,
+				F61C53A617057F2300135BD0 /* UIViewController+MJPopupViewController.m */,
+				F680B75316B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.h */,
+				F680B75416B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.m */,
+				F680B75016B90AAF00B57880 /* UDPEcho.h */,
+				F680B75116B90AAF00B57880 /* UDPEcho.m */,
+				F680B72C16B9093600B57880 /* OneFingerRotationGestureRecognizer.h */,
+				F680B72D16B9093600B57880 /* OneFingerRotationGestureRecognizer.m */,
+				F69918BE158492B200D3CC89 /* TouchMotionAppDelegate.h */,
+				F69918BF158492B200D3CC89 /* TouchMotionAppDelegate.m */,
+				F69918C6158492D900D3CC89 /* MotionView.h */,
+				F69918C7158492D900D3CC89 /* MotionView.m */,
+				F6D4111315FBE4950001A6BD /* Connect.h */,
+				F6D4111415FBE4950001A6BD /* Connect.m */,
+				F69918C8158492D900D3CC89 /* MotionView.xib */,
+				F69918B6158492B200D3CC89 /* Supporting Files */,
+				F6CA95F3161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.h */,
+				F6CA95F4161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.m */,
+				F6A4B89916200BA00087CEE9 /* CPBAcceleromterDelegate.h */,
+				F6A4B89A16200BA00087CEE9 /* CPBAcceleromterDelegate.m */,
+			);
+			path = touchMotion;
+			sourceTree = "<group>";
+		};
+		F69918B6158492B200D3CC89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F69918B7158492B200D3CC89 /* touchMotion-Info.plist */,
+				F69918B8158492B200D3CC89 /* InfoPlist.strings */,
+				F69918BB158492B200D3CC89 /* main.m */,
+				F69918BD158492B200D3CC89 /* touchMotion-Prefix.pch */,
+				F6A4B89D16200C190087CEE9 /* SynthesizeSingleton.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F69918AA158492B200D3CC89 /* touchMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F69918C3158492B200D3CC89 /* Build configuration list for PBXNativeTarget "touchMotion" */;
+			buildPhases = (
+				F69918A7158492B200D3CC89 /* Sources */,
+				F69918A8158492B200D3CC89 /* Frameworks */,
+				F69918A9158492B200D3CC89 /* Resources */,
+				F636FD1F16FF9D05006AA403 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = touchMotion;
+			productName = touchMotion;
+			productReference = F69918AB158492B200D3CC89 /* touchMotion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F69918A2158492B200D3CC89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = F69918A5158492B200D3CC89 /* Build configuration list for PBXProject "touchMotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = F69918A0158492B200D3CC89;
+			productRefGroup = F69918AC158492B200D3CC89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F69918AA158492B200D3CC89 /* touchMotion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F69918A9158492B200D3CC89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F69918BA158492B200D3CC89 /* InfoPlist.strings in Resources */,
+				F69918CA158492D900D3CC89 /* MotionView.xib in Resources */,
+				F64D534716F734E7002227C0 /* PopupViewController.xib in Resources */,
+				F61C53AB17057F4600135BD0 /* blue_arrow_3.png in Resources */,
+				F61C53AC17057F4600135BD0 /* blue_arrow.png in Resources */,
+				F61C53AF17057F5D00135BD0 /* maze10_old.jpg in Resources */,
+				F61C53B017057F5D00135BD0 /* maze10.jpg in Resources */,
+				F61C53B217057F6A00135BD0 /* blue_grid_2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F69918A7158492B200D3CC89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D4118215FBEB9D0001A6BD /* Connect.m in Sources */,
+				F69918BC158492B200D3CC89 /* main.m in Sources */,
+				F69918C9158492D900D3CC89 /* MotionView.m in Sources */,
+				F6D4111215FBE1EB0001A6BD /* TouchMotionAppDelegate.m in Sources */,
+				F6CA95F5161C9D0E0008ED24 /* CPBPressureTouchGestureRecognizer.m in Sources */,
+				F6A4B89B16200BA00087CEE9 /* CPBAcceleromterDelegate.m in Sources */,
+				F680B72E16B9093600B57880 /* OneFingerRotationGestureRecognizer.m in Sources */,
+				F680B75216B90AAF00B57880 /* UDPEcho.m in Sources */,
+				F680B75516B90AE700B57880 /* KTOneFingerRotationGestureRecognizer.m in Sources */,
+				F64D534616F734E7002227C0 /* PopupViewController.m in Sources */,
+				F61C53A717057F2300135BD0 /* MJPopupBackgroundView.m in Sources */,
+				F61C53A817057F2300135BD0 /* UIViewController+MJPopupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F69918B8158492B200D3CC89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F69918B9158492B200D3CC89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F69918C1158492B200D3CC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				"OTHER_LDFLAGS[arch=*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = armv7;
+			};
+			name = Debug;
+		};
+		F69918C2158492B200D3CC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
+			};
+			name = Release;
+		};
+		F69918C4158492B200D3CC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "\"$HOME/Library/SDKs/VVOSC/$(PLATFORM_NAME).sdk\" \"$HOME/Library/SDKs/VVBasics/$(PLATFORM_NAME).sdk\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../vvopensource-read-only/build@rpath\"",
+					"\"$(SRCROOT)/../../vvopensource-read-only/build@rpath\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "touchMotion/touchMotion-Prefix.pch";
+				INFOPLIST_FILE = "touchMotion/touchMotion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/SDKs/VVOSC/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../../Library/SDKs/VVBasics/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../Library/SDKs/VVBasics/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../Library/SDKs/VVOSC/iphoneos.sdk/usr/local/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"\"-ObjC -lVVOSC -lVVBasics\"",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F69918C5158492B200D3CC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "\"$HOME/Library/SDKs/VVOSC/$(PLATFORM_NAME).sdk\" \"$HOME/Library/SDKs/VVBasics/$(PLATFORM_NAME).sdk\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../vvopensource-read-only/build@rpath\"",
+					"\"$(SRCROOT)/../../vvopensource-read-only/build@rpath\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "touchMotion/touchMotion-Prefix.pch";
+				INFOPLIST_FILE = "touchMotion/touchMotion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/SDKs/VVOSC/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../../Library/SDKs/VVBasics/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../Library/SDKs/VVBasics/iphoneos.sdk/usr/local/lib\"",
+					"\"$(SRCROOT)/../../Library/SDKs/VVOSC/iphoneos.sdk/usr/local/lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"\"-ObjC -lVVOSC -lVVBasics\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F69918A5158492B200D3CC89 /* Build configuration list for PBXProject "touchMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F69918C1158492B200D3CC89 /* Debug */,
+				F69918C2158492B200D3CC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F69918C3158492B200D3CC89 /* Build configuration list for PBXNativeTarget "touchMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F69918C4158492B200D3CC89 /* Debug */,
+				F69918C5158492B200D3CC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F69918A2158492B200D3CC89 /* Project object */;
+}
