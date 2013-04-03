@@ -147,7 +147,7 @@ Maze_Point Maze::getMaze_Point4(int tz, int tx)
 	return Maze_Point(tx+1, tz);
 }
 
-void Maze::solveMaze(double txi, double tzi, double txf, double tzf, int x_init, int z_init, int x_end, int z_end)
+void Maze::solveMaze(double txi, double tzi, double txf, double tzf, int x_init, int z_init, int x_end, int z_end, int **motionmaze)
 {
 	if (!isPathCleared)
 	{
@@ -155,7 +155,7 @@ void Maze::solveMaze(double txi, double tzi, double txf, double tzf, int x_init,
 		isPathCleared = true;
 	}
 	
-	solveMaze(txi, tzi, x_init, z_init, x_end, z_end);
+	solveMaze(txi, tzi, x_init, z_init, x_end, z_end,motionmaze);
 
 	path.push_back(Double_Point(txf, tzf));
 
@@ -165,26 +165,30 @@ void Maze::solveMaze(double txi, double tzi, double txf, double tzf, int x_init,
 void Maze::clearpath()
 {
 	path.clear();
+	motion_path.clear();
 	isPathCleared = true;
 }
 
-void Maze::solveMaze(double txi, double tzi, int x_init, int z_init, int x_end, int z_end)
+void Maze::solveMaze(double txi, double tzi, int x_init, int z_init, int x_end, int z_end, int **motionmaze)
 {
 	if (!isPathCleared)
 	{
 		path.clear();
+		motion_path.clear();
 		isPathCleared = true;
 	}
 
 	//path.push_back(Double_Point(txi, tzi));
+	
 
 	std::vector <Maze_Point> maze_solution;
 
 	djikstra(x_init, z_init, x_end, z_end, maze_solution);
-
 	for (int i=0; i<maze_solution.size(); i++)
 	{
 		path.push_back(Double_Point(xStart + (width-maze_solution[i].x-0.5)*unitWidth, zStart + (maze_solution[i].z+0.5)*unitHeight));
+		printf ("maze soln:  %d %d %d\n", maze_solution[i].z,maze_solution[i].x, motionmaze[maze_solution[i].z][maze_solution[i].x]);
+		motion_path.push_back( motionmaze[maze_solution[i].z][maze_solution[i].x]);
 	}
 
 	//for debugging

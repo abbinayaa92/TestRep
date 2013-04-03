@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;Z:\Dropbox\fingerwalk_viewer -Test\fingerwalk_viewer\boost&quot;;&quot;Z:\Dropbox\fingerwalk_viewer -Test\fingerwalk_viewer\animation\lib&quot;;&quot;Z:\Dropbox\fingerwalk_viewer -Test\fingerwalk_viewer\animation\include&quot;;&quot;Z:\Dropbox\fingerwalk_viewer -Test\fingerwalk_viewer\simbicon&quot;;&quot;Z:\Dropbox\fingerwalk_viewer -Test\fingerwalk_viewer\oscpack&quot;"
+				AdditionalIncludeDirectories="&quot;Z:\Dropbox\TestRep\fingerwalk_viewer -Test\fingerwalk_viewer\boost&quot;;&quot;Z:\Dropbox\TestRep\fingerwalk_viewer -Test\fingerwalk_viewer\animation\lib&quot;;&quot;Z:\Dropbox\TestRep\fingerwalk_viewer -Test\fingerwalk_viewer\animation\include&quot;;&quot;Z:\Dropbox\TestRep\fingerwalk_viewer -Test\fingerwalk_viewer\simbicon&quot;;&quot;Z:\Dropbox\TestRep\fingerwalk_viewer -Test\fingerwalk_viewer\oscpack&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -892,6 +892,10 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 		</Filter>
+		<File
+			RelativePath=".\ClassDiagram11.cd"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

@@ -15,7 +15,8 @@ class Vector3d2;
 struct Point3d2;
 
 enum {
-	WALK
+	WALK,
+	SKATE
 };
 
 struct Neighbor //store the condition for a transition

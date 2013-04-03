@@ -2529,6 +2529,7 @@ double walls_array[1733][6]={{-2700,50,5,-2500,50,5},
         }*/
         int newHalf = currentMotion_.size() / 2;
         // blend the previous motion and the current one, if not the first cycle
+		//Weight computation and blending
         if (!firstCycle) {
             tree_.Compute();
             if (step_ == 0) {
@@ -2549,6 +2550,7 @@ double walls_array[1733][6]={{-2700,50,5,-2500,50,5},
     }
 
     // set the position of the root
+	//posture blending
 	//modified
 	//character_orientation = 30*asin(1.0)/90; //for testing
     VectorR3 newPos = currentMotion_[step_][0].ToPoint();
@@ -2780,6 +2782,7 @@ double walls_array[1733][6]={{-2700,50,5,-2500,50,5},
 	}
 	
     // if not the first cycle, try to move the root to prevent foot sliding
+	//motion retargetting
     if (!firstCycle) {
         tree_.Compute();
         if (fixedFoot == LEFT_FOOT)
@@ -2798,6 +2801,7 @@ double walls_array[1733][6]={{-2700,50,5,-2500,50,5},
     }
 
     // go to next frame, or back at the beginning
+	//incremental timewarping
     ++step_;
     if (step_ >= currentMotion_.size() / 2) {
         firstCycle = false;
@@ -3088,13 +3092,13 @@ void Animation::RunTest()
 /* ---------------- read the side jumping forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/SideJump.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/sidejump_new_left_2.bvh");
+	//"./animation/data/SideJump.bvh"
     rootHeight[SIDE_JUMP] = GetRootHeight();
     AssignIndex();
 	cout<<"sidejump"<<endl;
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[SIDE_JUMP], "./animation/data/SideJump.bvh");
+    ReadBVHFile(&jointTrajectories_[SIDE_JUMP], "./animation/data/sidejump_new_left.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[SIDE_JUMP]);
     ConvertFromDegreeToRadian(&jointTrajectories_[SIDE_JUMP]);
@@ -3122,14 +3126,14 @@ void Animation::RunTest()
 /* ---------------- read the sit forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/sitstand.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/squat_new.bvh");
+	//"./animation/data/sitstand.bvh"
     rootHeight[SIT_FORWARD] = GetRootHeight();
     AssignIndex();
     // read joint trajectories and process discontinuities
 	//sitstand
 	cout<<"sitstand"<<endl;
-    ReadBVHFile(&jointTrajectories_[SIT_FORWARD], "./animation/data/sitstand.bvh");
+    ReadBVHFile(&jointTrajectories_[SIT_FORWARD], "./animation/data/squat_new.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[SIT_FORWARD]);
     ConvertFromDegreeToRadian(&jointTrajectories_[SIT_FORWARD]);
@@ -3157,13 +3161,13 @@ void Animation::RunTest()
 /* ---------------- read the split forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/gymnastic_split.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/split_hor.bvh");
+	//"./animation/data/gymnastic_split.bvh"
     rootHeight[SPLIT_FORWARD] = GetRootHeight();
     AssignIndex();
 	cout<<"split"<<endl;
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[SPLIT_FORWARD], "./animation/data/gymnastic_split.bvh");
+    ReadBVHFile(&jointTrajectories_[SPLIT_FORWARD], "./animation/data/split_hor.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[SPLIT_FORWARD]);
     ConvertFromDegreeToRadian(&jointTrajectories_[SPLIT_FORWARD]);
@@ -3224,13 +3228,13 @@ void Animation::RunTest()
 	/* ---------------- read the side walking forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/sidewalk_right.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/sidewalk_right_new.bvh");
+	//"./animation/data/sidewalk_right.bvh"
     rootHeight[SIDE_WALK] = GetRootHeight();
     AssignIndex();
 	cout<<"sidewalk"<<endl;
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[SIDE_WALK], "./animation/data/sidewalk_right.bvh");
+    ReadBVHFile(&jointTrajectories_[SIDE_WALK], "./animation/data/sidewalk_right_new_2.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[SIDE_WALK]);
     ConvertFromDegreeToRadian(&jointTrajectories_[SIDE_WALK]);
@@ -3257,13 +3261,13 @@ void Animation::RunTest()
 /* ---------------- read the marching forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/march_crop.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/march_new.bvh");
+	//"./animation/data/march_crop.bvh"
     rootHeight[MARCH_FORWARD] = GetRootHeight();
     AssignIndex();
 	cout<<"march"<<endl;
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[MARCH_FORWARD], "./animation/data/march_crop.bvh");
+    ReadBVHFile(&jointTrajectories_[MARCH_FORWARD], "./animation/data/march_new.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[MARCH_FORWARD]);
     ConvertFromDegreeToRadian(&jointTrajectories_[MARCH_FORWARD]);
@@ -3290,13 +3294,13 @@ void Animation::RunTest()
 /* ---------------- read the kicking forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/kickboxing02.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/kick3_med.bvh");
+	//"./animation/data/kickboxing02.bvh"
     rootHeight[KICK_FORWARD] = GetRootHeight();
     AssignIndex();
 	cout<<"kick"<<endl;
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[KICK_FORWARD], "./animation/data/kickboxing02.bvh");
+    ReadBVHFile(&jointTrajectories_[KICK_FORWARD], "./animation/data/kick2_long.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[KICK_FORWARD]);
     ConvertFromDegreeToRadian(&jointTrajectories_[KICK_FORWARD]);
@@ -3324,12 +3328,12 @@ void Animation::RunTest()
 /* ---------------- read the ducking ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/ducking_long.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/duck_new_long.bvh");
+	//"./animation/data/ducking_long.bvh"
     rootHeight[DUCK] = GetRootHeight();
     AssignIndex();
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[DUCK], "./animation/data/ducking_long.bvh");
+    ReadBVHFile(&jointTrajectories_[DUCK], "./animation/data/duck_new_long.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[DUCK]);
     ConvertFromDegreeToRadian(&jointTrajectories_[DUCK]);
@@ -3356,12 +3360,12 @@ void Animation::RunTest()
 /* ---------------- read the skating forward ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/skating_crop.bvh");
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/skate_crop_new.bvh");
+	//"./animation/data/skating_crop.bvh"
     rootHeight[SKATE_FORWARD] = GetRootHeight();
     AssignIndex();
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[SKATE_FORWARD], "./animation/data/skating_crop.bvh");
+    ReadBVHFile(&jointTrajectories_[SKATE_FORWARD], "./animation/data/skate_crop_new.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[SKATE_FORWARD]);
     ConvertFromDegreeToRadian(&jointTrajectories_[SKATE_FORWARD]);
@@ -3389,14 +3393,14 @@ void Animation::RunTest()
 	/* ---------------- read the ballet spin ---------------- */
 
     // read skeleton and assign index to each joint
-    BuildSkeletonFromBVH("./animation/data/TurnDance.bvh");
-	//BalletSpin
-	//"./animation/data/tapDance_crop1.bvh"
+    BuildSkeletonFromBVH("./animation/data/spin_2_new.bvh");
+	//TurnDance.bvh
+	
     rootHeight[BALLET_SPIN] = GetRootHeight();
     cout<<"in ballet spin"<<endl;
     AssignIndex();
     // read joint trajectories and process discontinuities
-    ReadBVHFile(&jointTrajectories_[BALLET_SPIN], "./animation/data/TurnDance.bvh");
+    ReadBVHFile(&jointTrajectories_[BALLET_SPIN], "./animation/data/spin_2_new.bvh");
     tree_.ComputMatrix();
     ProcessEulerAngles(&jointTrajectories_[BALLET_SPIN]);
     ConvertFromDegreeToRadian(&jointTrajectories_[BALLET_SPIN]);

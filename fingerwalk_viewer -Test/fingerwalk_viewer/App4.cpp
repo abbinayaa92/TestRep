@@ -27,6 +27,43 @@
 #define ADDRESS "127.0.0.1"
 
 // scaling factor from touch space to animation space
+int motion_type[35][25]={
+		{0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,22,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{23,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{23,0,22,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{23,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,22,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{23,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,22,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{23,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,22,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{23,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{23,0,22,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{23,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0},
+		{0,0,22,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+		{0,0,0,0,0,0,26,0,0,0,0,18,0,0,0,13,0,0,0,0,11,0,0,0},
+		{0,0,0,0,0,0,0,0,19,0,0,0,3,0,0,0,0,15,0,0,0,0,8,0}};
+
 static const float UNITSCALE_Y = 8.0f * 20;
 static const float UNITSCALE_X = 6.0f * 20;
 App4 *App4::_instance = NULL;
@@ -107,6 +144,8 @@ bool App4::init(bool online) {
 	_prevFoot[0] = _prevFoot[1] = NULL;
 	type=0;
 	dispType=0;
+	typeBegan=0;
+	typeEnd=0;
 	last_angle=0;
 	last_angle_cam=0;
 	retbool=true;
@@ -114,9 +153,12 @@ bool App4::init(bool online) {
 	walkflag=0;
 
 	_firstStep = true;
+	ignoreflag.resize(2);
+	ignoreflag[0]=ignoreflag[1]=false;
 	_startWalking = false;
 	jumpflag=true;
 	escflag=false;
+	endflag=false;
 	sendflag=false;
 	autoflag=false;
 	_sa.addGaitChangedListener(this);
@@ -185,10 +227,13 @@ void App4::setMaze()
 		{3,10,10,10,3,10,10,4,13,5,7,8,1,6,13,11,9,9,9,9,8,7,5,7,5},
 		{7,8,1,7,8,7,11,9,8,7,9,9,9,8,7,9,9,9,9,9,9,2,7,9,8}};
 
+		
 		int *tempMaze[35];
+		//*motionMaze[35];
 		for (int i=0; i<35; i++)
 		{
 			tempMaze[i] = maze_array[i];
+			motionMaze[i]=motion_type[i];
 		}
 
 		int width = 25;
@@ -205,7 +250,7 @@ void App4::setMaze()
 		_personstate->clearPath();
 		for (int i=0; i<_maze->path.size(); i++)
 		{
-			_personstate->addPost(_maze->path[i].z, _maze->path[i].x, WALK);
+		_personstate->addPost(_maze->path[i].z, _maze->path[i].x, WALK);
 		}
 		_personstate->construct_motion();
 		autoflag=true;*/
@@ -400,7 +445,7 @@ void App4::onDisplay() {
 							}
 							else
 							{
-								cout<<"mtime "<<mtime<<" prevtime "<<prevtime<<endl;
+								//cout<<"mtime "<<mtime<<" prevtime "<<prevtime<<endl;
 								if(fabs(prev2.y-m.y)<= 0.05 && fabs(prev.y-m.y)<= 0.05)
 									_currGaitType=kGaitSideWalk;
 								else if((fabs(prev2.endy-m.endy)>= 0.1 && fabs(prev2.endy-m.endy)<= 0.3 && fabs(prev.endy-m.endy)<= 0.05) || (fabs(prev.endy-m.endy)>= 0.1 && fabs(prev.endy-prev2.endy)<= 0.05))
@@ -641,13 +686,18 @@ void App4::onDisplay() {
 							AutoPoint prev= _allpoints.back();
 							cout<<"next:"<<prev.x2<<","<<prev.y2<<":"<<m.x2<<","<<m.y2<<endl;
 							_maze->clearpath();
-							_maze->solveMaze(0, 0, prev.x2, prev.y2, m.x2,m.y2);
+							for (int i=0; i<35; i++)
+							{
+								motionMaze[i]=motion_type[i];
+							}
+							_maze->solveMaze(0, 0, prev.x2, prev.y2, m.x2,m.y2,motionMaze);
 
 							_personstate->clearPath();
 
 							for (int i=0; i<_maze->path.size(); i++)
 							{
 								_personstate->addPost(_maze->path[i].z, _maze->path[i].x, WALK);
+								cout<<"type:"<<_maze->motion_path[i]<<endl;
 							}
 							_personstate->construct_motion();
 							_personstate->setCurrentFrame(0);
@@ -658,12 +708,13 @@ void App4::onDisplay() {
 					}
 					else
 					{
-						_maze->solveMaze(0, 0,11,0,m.x2 ,m.y2);
+						_maze->solveMaze(0, 0,11,0,m.x2 ,m.y2,motionMaze);
 						cout<<"solved"<<endl;
 						_personstate->clearPath();
 						for (int i=0; i<_maze->path.size(); i++)
 						{
 							_personstate->addPost(_maze->path[i].z, _maze->path[i].x, WALK);
+							cout<<"type:"<<_maze->motion_path[i]<<endl;
 						}
 						_personstate->construct_motion();
 						autoflag=true;
@@ -674,9 +725,9 @@ void App4::onDisplay() {
 				}
 				if(autoflag==true)
 				{
-				_lastTime = _currTime;
-				render();
-				this->updateCamera(dt);
+					_lastTime = _currTime;
+					render();
+					this->updateCamera(dt);
 				}
 			}
 		}
@@ -1010,7 +1061,10 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 				float angle = (arg++)->AsFloat();
 				int other= (type+1)%2;
 				if(abs(_footPrints[type]->size() - _footPrints[other]->size()) > 1)
+				{
 					cout<<"error in code :"<<type<<" "<<_footPrints[type]->size()<<" "<<other<<" "<<_footPrints[other]->size()<<endl;
+					throw "error in code";
+				}
 				else {}
 				//cout<<"correct:"<<type<<" "<<_footPrints[type]->size()<<" "<<other<<" "<<_footPrints[other]->size()<<endl;
 
@@ -1018,6 +1072,20 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 				{
 					cout<<"foot x:"<<x<<" y:"<<y<<" phase:"<<phase<<" type:"<<type<<" timestamp"<<setprecision(7)<<timestamp<<" mode:"<<mode<<endl;
 					FootStepNew m;
+					FootStepNew missed;
+					if(typeBegan!=type)
+					{
+						//ignoreflag[typeBegan]=true;
+						missed.x=x;
+						missed.y=y;
+						missed.down=true;
+						missed.type=typeBegan;
+						missed.startTime=timestamp-0.1;
+						missed.radius=radius;
+						missed.mode=mode;
+						missed.angle=angle;
+
+					}
 					m.x =x;
 					m.y= y;
 					//m.stepId=stepId;
@@ -1042,14 +1110,25 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 								prev.endy=prev.y+0.01;
 								prev.endTime=prev.startTime+0.001;
 								_footPrints[type]->push_back(prev);
+								cout<<"same began received again"<<endl;
+								typeEnd=other;
 							}
 						}
 						else
 							prev = _allPrints[type]->back() ;
+
+
 						m.steplength =(fabs(m.y - prev.y)* UNITSCALE_Y)/36.0;
 						m.stepduration= m.startTime- prev.endTime;
 						if(m.stepduration>2.5)
 							m.stepduration=2.5;
+						if(typeBegan!=type)
+						{
+							missed.steplength=(fabs(missed.y - prev.y)* UNITSCALE_Y)/36.0;
+							missed.stepduration= missed.startTime- prev.endTime;
+							_footPrints[typeBegan]->push_back(missed);
+							numberSteps[typeBegan]++;
+						}
 					}
 					else
 					{
@@ -1098,7 +1177,9 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 						//}
 						_footPrints[type]->push_back(m);
 						numberSteps[type]++;
+
 					}
+					typeBegan=other;
 					//cout<<"step added type"<<type<<" "<<_footPrints[type]->size() <<" "<<_allPrints[type]->size()<<endl;
 					//_allPrints[type]->push_back(m);
 					//cout<<"footprints :"<<m.type<<" :"<<_footPrints[type]->size()<<endl;
@@ -1114,7 +1195,7 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 				 x_pt=0;
 				 y_pt=0;*/
 					cout<<"foot x:"<<x<<" y:"<<y<<" phase:"<<phase<<" type:"<<type<<" angle:"<<angle<<" timestamp"<<setprecision(7)<<timestamp<<" mode"<<mode<<endl;
-					FootStepNew m;
+					FootStepNew m,prev;
 					/*for(std::vector<FootStepNew *>::iterator it = _footPrints.begin(); it != _footPrints.end(); ++it)
 					{
 					if((*it)->down==true)
@@ -1126,6 +1207,46 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 					}
 					*/
 					//numberSteps[type] > _allPrints[type]->size()
+					/*if(typeEnd==type)
+					{*/
+					/*if(ignoreflag[typeEnd]==true)
+					{
+					if(typeEnd==type)
+					ignoreflag[typeEnd]=false;
+					else if(typeEnd!=type)
+					{
+					endflag=true;
+					cout<<"step popped"<<endl;
+					_footPrints[type]->pop_back();
+					ignoreflag[typeEnd]=false;
+					}
+					}*/
+
+					if(typeEnd!=type)
+					{
+						if(!_footPrints[typeEnd]->empty())
+						{
+							prev=_footPrints[typeEnd]->back();
+							if(prev.down==true)
+							{
+								prev.endTime=timestamp;
+								prev.down=false;
+								prev.angle=angle;
+								prev.endx=x;
+								prev.endy=y;
+								prev.mode=mode;
+								prev.radius_end = radius;
+								prev.currend=_timer.timeEllapsed();
+								_footPrints[typeEnd]->pop_back();
+								_footPrints[typeEnd]->push_back(prev);
+							}
+							else
+								throw "error in prev";
+						}
+						else
+							throw "error in prev: footprint not found";
+					}
+
 					if(!_footPrints[type]->empty())
 					{
 						m=_footPrints[type]->back();
@@ -1165,6 +1286,11 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 							m.x=x;
 							m.y=y;
 							_footPrints[type]->push_back(m);
+							if(typeBegan==type)
+							{
+								cout<<"type beg error"<<endl;
+								typeBegan=other;
+							}
 						}
 					}
 					else
@@ -1185,9 +1311,14 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 						m.x=x;
 						m.y=y;
 						_footPrints[type]->push_back(m);
+						if(typeBegan==type)
+						{
+							cout<<"type beg error"<<endl;
+							typeBegan=other;
+						}
 					}
 
-
+					typeEnd=other;
 					if(winmode==2 && sendflag==true)
 					{
 						double rootposx, rootposy, rootposz;
@@ -1201,9 +1332,6 @@ void App4::ProcessMessage(const ReceivedMessage& m, const IpEndpointName& remote
 					}
 
 				}
-
-
-
 			}
 			else if (strcmp(m.AddressPattern(), "/play") == 0) {
 				ReceivedMessage::const_iterator arg = m.ArgumentsBegin();

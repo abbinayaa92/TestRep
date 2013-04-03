@@ -399,7 +399,7 @@ void updatestep(float x,float y)
     self.view.userInteractionEnabled = YES;
     
     [self setupGestureRecognizer];
-    winmode=2;
+    winmode=1;
     //  CGRect newrect=CGRectMake(-10000, -20000, 24000, 34000);
     // CGRect newrect= CGRectMake(-1000,500, 5012.5, -7517.5);
     NSLog(@"width %f height %f",self.view.bounds.size.width,self.view.bounds.size.height);

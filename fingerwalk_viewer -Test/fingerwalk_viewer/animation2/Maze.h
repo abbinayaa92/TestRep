@@ -58,11 +58,12 @@ public:
 	Maze_Point getMaze_Point4(int tz, int tx);
 
 	std::vector <Double_Point> path;
+	std::vector <int> motion_path;
 	bool isPathCleared;
 
 	void clearpath();
-	void solveMaze(double txi, double tzi, double txf, double tzf, int x_init, int z_init, int x_end, int z_end);
-	void solveMaze(double txi, double tzi, int x_init, int z_init, int x_end, int z_end);
+	void solveMaze(double txi, double tzi, double txf, double tzf, int x_init, int z_init, int x_end, int z_end,int **motionmaze);
+	void solveMaze(double txi, double tzi, int x_init, int z_init, int x_end, int z_end,int **motionmaze);
 	void djikstra(int x_init, int z_init, int x_end, int z_end, std::vector <Maze_Point>& maze_solution);
 };
 

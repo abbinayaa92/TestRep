@@ -95,8 +95,11 @@ PersonState::PersonState()
 	//We take m 30 frames (equals to 1 second)
 
 	//add motion from database
-	motion_property.resize(1);
+motion_property.resize(2);
 	setBVHFormat(new BVHFormat("../../compressed_data/compressed_30fps_walking1.bvh", 0), WALK, WALK, 0, 0);
+	printf("Testing walk\n");
+	setBVHFormat(new BVHFormat("../../compressed_data/compressed_30fps_skating.bvh", 0), SKATE, SKATE, 0, 0);
+	printf("Testing skate\n");
 	
 	resizeNeighbor();
 	FILE* fmove1 = fopen("../motion_graphs.txt", "r");
@@ -555,7 +558,7 @@ printf("pass\n");
 	int sp = typePost.front();
 	int init_frame;
 	wopt = 1000000000000;
-	for (init_frame=70; init_frame<1000; init_frame+=200)
+	for (init_frame=70; init_frame<motion_property[sp].bvh->getFrameNumber()-20; init_frame+=200)
 	{
 		double angle_motion = getAngle(motion_property[sp].bvh->getNodeX(init_frame, 0),
 										motion_property[sp].bvh->getNodeZ(init_frame, 0),
@@ -587,7 +590,7 @@ printf("pass\n");
 	{
 		//ct++;
 		//start_iteration = clock();
-
+		printf("loop/n");
 		wopt = 1000000000000;
 		search_motion(motion_list.back(), current_x, current_z, currentPost, 0, 0);
 		

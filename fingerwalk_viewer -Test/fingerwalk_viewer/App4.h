@@ -95,6 +95,8 @@ private:
 	bool escflag;
 	bool sendflag;
 	bool autoflag;
+	bool endflag;
+	std::vector<bool> ignoreflag;
 	int flag;
 	int mode;
 	int numberSteps[2];
@@ -141,11 +143,13 @@ private:
 
 	Animation *_anim;
 	Maze *_maze;
+	int *motionMaze[35];
 	PersonState *_personstate;
 	GaitType _currGaitType, _nextGaitType, _prevGaitType;
 	float _currStepLength, _nextStepLength;
 	float _currStepDuration, _nextStepDuration;
 	int type,dispType;
+	int typeBegan, typeEnd;
 	bool retbool;
 	int walkflag,win,winmode;
 	//IpEndpointName& EndPoint;

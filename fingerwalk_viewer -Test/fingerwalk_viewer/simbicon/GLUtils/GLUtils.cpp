@@ -1897,8 +1897,8 @@ void GLUtils::drawGround(double size, double spotRadius, int nb, bool drawmaze, 
 	{
 		for(int i=0;i<35;i++)
 		{
-			if(fabs(currx-x_maze)<750 && fabs(currz-z_maze)<750)
-			{
+			//if(fabs(currx-x_maze)<750 && fabs(currz-z_maze)<750)
+			//{
 			if(j==0 &&((i-3)%4==0))
 				motion_array[i][j]=23;
 			else if(j==2 && ((i-2)%5==0))
@@ -1930,7 +1930,7 @@ void GLUtils::drawGround(double size, double spotRadius, int nb, bool drawmaze, 
 
 			if((maze_array[i][j]==1 || maze_array[i][j]==3 || maze_array[i][j]==10) && motion_array[i][j]!=-1)
 			{
-				outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
+				//outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
 				drawportal1(x_maze,y_maze,z_maze,motion_array[i][j]);
 				if(motion_array[i][j]==18)
 					drawice(x_maze,y_maze+0.1,z_maze);
@@ -1943,7 +1943,7 @@ void GLUtils::drawGround(double size, double spotRadius, int nb, bool drawmaze, 
 			}
 			else if((maze_array[i][j]==2 || maze_array[i][j]==4 || maze_array[i][j]==9) && motion_array[i][j]!=-1)
 			{
-				outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
+				//outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
 				drawportal2(x_maze,y_maze,z_maze,motion_array[i][j]);
 				if(motion_array[i][j]==18)
 					drawice(x_maze,y_maze+0.1,z_maze);
@@ -1956,7 +1956,7 @@ void GLUtils::drawGround(double size, double spotRadius, int nb, bool drawmaze, 
 			}
 			else if(motion_array[i][j]!=-1)
 			{
-				outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
+				//outputFile<<"{"<<x_maze<<","<<x_maze+200<<","<<z_maze<<","<<z_maze+200<<","<<motion_array[i][j]<<"},"<<endl;
 				drawportal3(x_maze,y_maze,z_maze,motion_array[i][j]);
 				if(motion_array[i][j]==18)
 					drawice(x_maze,y_maze+0.1,z_maze);
@@ -1967,13 +1967,27 @@ void GLUtils::drawGround(double size, double spotRadius, int nb, bool drawmaze, 
 				else if(motion_array[i][j]==3)
 					drawjump(x_maze,y_maze+0.1,z_maze);
 			}
-			}
+			//}
 
 			z_maze+=200.5;
 		}
 		z_maze=0;
 		x_maze+=200.5;
 	}
+
+	for(int i=0;i<35;i++)
+	{
+		outputFile<<"{";
+		for(int j=0;j<24;j++)
+		{
+			if(j==23)
+				outputFile<<motion_array[i][j];
+			else
+				outputFile<<motion_array[i][j]<<",";
+		}
+		outputFile<<"},"<<endl;
+	}
+
 
 	glPopMatrix();
 	}

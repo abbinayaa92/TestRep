@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PacketListener" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>oscpack\ip\PacketListener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PersonState" Collapsed="true">
+    <Position X="4.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JFQBFU4myBwghQDaG4riQdFAWNgGQ3UQqgIDNIHJ70g=</HashCode>
+      <FileName>animation2\PersonState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Animation" Collapsed="true">
+    <Position X="6.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ATUI1CECiBBYBhCB0hLIUEAQScplJoUiUDCEgBkBwx0=</HashCode>
+      <FileName>animation\Animation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App4" Collapsed="true">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FFQEIBAw3AroQiGiANJR0SGQCIttIAoBE8AVKARWohg=</HashCode>
+      <FileName>App4.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drawable" Collapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GLWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GaitChangedListener" Collapsed="true">
+    <Position X="1.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StepsAnalyzer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="osc::MessageMappingOscPacketListener&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>oscpack\osc\MessageMappingOscPacketListener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="osc::OscPacketListener" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABIAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>oscpack\osc\OscPacketListener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
